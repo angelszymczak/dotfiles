@@ -9,9 +9,13 @@ export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
 # ------------------------------------------------------------------------------
 # Languages
 # ------------------------------------------------------------------------------
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
 export GEM_HOME="$HOME/.gem"
-export GOPATH="$HOME/.go"
+export RBENV_PATH="$HOME/.rbenv"
+# export CARGO_PATH="$HOME/.cargo"
+# export GO_PATH="$HOME/.go"
+# export NVM_DIR="$HOME/.nvm"
+# export PYTHON_PATH="$HOME/.conda"
+# export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
 
 # ------------------------------------------------------------------------------
 # Apps
@@ -28,23 +32,66 @@ export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
 path=(
-	"$HOME/bin"
-	"$DOTLY_PATH/bin"
-	"$DOTFILES_PATH/bin"
-	"$JAVA_HOME/bin"
-	"$GEM_HOME/bin"
-	"$GOPATH/bin"
-	"$HOME/.cargo/bin"
-	"/usr/local/opt/ruby/bin"
-	"/usr/local/opt/python/libexec/bin"
-	"/opt/homebrew/bin"
-	"/usr/local/bin"
-	"/usr/local/sbin"
-	"/bin"
-	"/usr/bin"
-	"/usr/sbin"
-	"/sbin"
-	"$path"
+  # User session binaries
+  # Own or 3rd-party binary and scripts allowed for session user.
+  "$HOME/bin"
+
+  # Custom user Binary and Settings
+  "$DOTLY_PATH/bin"
+  "$DOTFILES_PATH/bin"
+
+  # Languages Binary
+  # --- Ruby ------------------------------------ #
+  "$GEM_HOME/bin"
+  "$RBENV_PATH/shims/ruby"
+
+  # --- Rust ------------------------------------ #
+  # "$CARGO_PATH/bin"
+
+  # --- Go Lang --------------------------------- #
+  # "$GO_PATH/bin"
+
+  # --- Node ------------------------------------ #
+  # "$NVM_DIR/bin"
+
+  # --- Python ---------------------------------- #
+  # "$PYTHON_PATH/bin"
+
+  # --- Java ------------------------------------ #
+  # "$JAVA_HOME/bin"
+
+  #-----------------------------------------------------------------
+  # Additional tools and software 
+  #-----------------------------------------------------------------
+  # Brew Home for arm64 (Apple Silicon M1 or higher)
+  "/opt/homebrew/bin"
+
+  # Brew Home for i386 (Intel)
+  # It is traditionally used on UNIX systems for local software that is
+  # installed outside of the system's standard package management.
+  "/usr/local/bin"
+
+  # Similar to /usr/local/bin but for binaries that run as root.
+  "/usr/local/sbin"
+
+  #-----------------------------------------------------------------
+  # OS binaries at the end 
+  # To ensure that the base programs are available if custom or
+  # additional versions are not.
+  #-----------------------------------------------------------------
+  # Essential binaries required for user mode boot and system repair.
+  "/bin"
+
+  # Standard OS binaries.
+  "/usr/bin"
+
+  # Standard OS binaries that run as root.
+  # Operating system binaries that are generally run as superuser.
+  "/usr/sbin"
+
+  # Essential binaries that are required for system boot and repair, usually run as superuser.
+  "/sbin"
+  "$path"
 )
 
 export path
