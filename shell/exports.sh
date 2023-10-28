@@ -32,7 +32,10 @@ export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
 path=(
+  # --------------------------------------------- #
   # User session binaries
+  # --------------------------------------------- #
+
   # Own or 3rd-party binary and scripts allowed for session user.
   "$HOME/bin"
 
@@ -40,7 +43,10 @@ path=(
   "$DOTLY_PATH/bin"
   "$DOTFILES_PATH/bin"
 
+  # --------------------------------------------- #
   # Languages Binary
+  # --------------------------------------------- #
+  
   # --- Ruby ------------------------------------ #
   "$GEM_HOME/bin"
   "$RBENV_PATH/shims/ruby"
@@ -63,6 +69,7 @@ path=(
   #-----------------------------------------------------------------
   # Additional tools and software 
   #-----------------------------------------------------------------
+
   # Brew Home for arm64 (Apple Silicon M1 or higher)
   "/opt/homebrew/bin"
 
@@ -79,6 +86,7 @@ path=(
   # To ensure that the base programs are available if custom or
   # additional versions are not.
   #-----------------------------------------------------------------
+
   # Essential binaries required for user mode boot and system repair.
   "/bin"
 
@@ -95,3 +103,4 @@ path=(
 )
 
 export path
+
