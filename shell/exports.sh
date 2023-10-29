@@ -11,7 +11,7 @@ export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
 # ------------------------------------------------------------------------------
 export GEM_HOME="$HOME/.gem"
 export RBENV_PATH="$HOME/.rbenv"
-# export CARGO_PATH="$HOME/.cargo"
+export CARGO_PATH="$HOME/.cargo"
 # export GO_PATH="$HOME/.go"
 # export NVM_DIR="$HOME/.nvm"
 # export PYTHON_PATH="$HOME/.conda"
@@ -52,7 +52,7 @@ path=(
   "$RBENV_PATH/shims/ruby"
 
   # --- Rust ------------------------------------ #
-  # "$CARGO_PATH/bin"
+  "$CARGO_PATH/bin"
 
   # --- Go Lang --------------------------------- #
   # "$GO_PATH/bin"
