@@ -1,10 +1,9 @@
+#!/usr/bin/env zsh
+
 # ------------------------------------------------------------------------------
-# Codely theme config
+# Theme config
 # ------------------------------------------------------------------------------
-export CODELY_THEME_MINIMAL=false
-export CODELY_THEME_MODE="dark"
-export CODELY_THEME_PROMPT_IN_NEW_LINE=false
-export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
+
 
 # ------------------------------------------------------------------------------
 # Languages
@@ -12,21 +11,12 @@ export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
 export GEM_HOME="$HOME/.gem"
 export RBENV_PATH="$HOME/.rbenv"
 export CARGO_PATH="$HOME/.cargo"
-# export GO_PATH="$HOME/.go"
-# export NVM_DIR="$HOME/.nvm"
-# export PYTHON_PATH="$HOME/.conda"
-# export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
+
 
 # ------------------------------------------------------------------------------
-# Apps
+# CLI Apps config
 # ------------------------------------------------------------------------------
-if [ "$CODELY_THEME_MODE" = "dark" ]; then
-	fzf_colors="pointer:#ebdbb2,bg+:#3c3836,fg:#ebdbb2,fg+:#fbf1c7,hl:#8ec07c,info:#928374,header:#fb4934"
-else
-	fzf_colors="pointer:#db0f35,bg+:#d6d6d6,fg:#808080,fg+:#363636,hl:#8ec07c,info:#928374,header:#fffee3"
-fi
 
-export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
 
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
@@ -40,7 +30,6 @@ path=(
   "$HOME/bin"
 
   # Custom user Binary and Settings
-  "$DOTLY_PATH/bin"
   "$DOTFILES_PATH/bin"
 
   # --------------------------------------------- #
@@ -53,18 +42,6 @@ path=(
 
   # --- Rust ------------------------------------ #
   "$CARGO_PATH/bin"
-
-  # --- Go Lang --------------------------------- #
-  # "$GO_PATH/bin"
-
-  # --- Node ------------------------------------ #
-  # "$NVM_DIR/bin"
-
-  # --- Python ---------------------------------- #
-  # "$PYTHON_PATH/bin"
-
-  # --- Java ------------------------------------ #
-  # "$JAVA_HOME/bin"
 
   #-----------------------------------------------------------------
   # Additional tools and software 
