@@ -34,12 +34,12 @@ path=(
   "$HOME/bin"
 
   # Custom user Binary and Settings
-  "$DOTFILES_PATH/bin"
+  # "$DOTFILES_PATH/bin"
 
   # --------------------------------------------- #
   # Languages Binary
   # --------------------------------------------- #
-  
+
   # --- Ruby ------------------------------------ #
   "$GEM_HOME/bin"
   "$RBENV_PATH/shims/ruby"
@@ -80,7 +80,7 @@ path=(
 
   # Essential binaries that are required for system boot and repair, usually run as superuser.
   "/sbin"
-  "$path"
+  "$PATH"
 )
 
 export path
