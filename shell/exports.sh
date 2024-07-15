@@ -10,8 +10,8 @@
 # ------------------------------------------------------------------------------
 
 # Ruby
-export GEM_HOME="$HOME/.gem"
-export RBENV_PATH="$HOME/.rbenv"
+# export GEM_HOME="$HOME/.gem"
+# export RBENV_PATH="$HOME/.rbenv"
 
 # Rust
 export CARGO_PATH="$HOME/.cargo"
@@ -41,8 +41,8 @@ path=(
   # --------------------------------------------- #
 
   # --- Ruby ------------------------------------ #
-  "$GEM_HOME/bin"
-  "$RBENV_PATH/shims/ruby"
+  # "$GEM_HOME/bin"
+  # "$RBENV_PATH/shims/ruby"
 
   # --- Rust ------------------------------------ #
   "$CARGO_PATH/bin"
