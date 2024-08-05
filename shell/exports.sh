@@ -85,3 +85,4 @@ path=(
 
 export path
 
+export EDITOR=nvim
