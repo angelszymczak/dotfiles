@@ -54,6 +54,9 @@ path=(
   # Brew Home for arm64 (Apple Silicon M1 or higher)
   "/opt/homebrew/bin"
 
+  # INFO: suggested by `brew doctor`
+  "/opt/homebrew/sbin"
+
   # Brew Home for i386 (Intel)
   # It is traditionally used on UNIX systems for local software that is
   # installed outside of the system's standard package management.
