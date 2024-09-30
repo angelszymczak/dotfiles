@@ -36,25 +36,18 @@ path=(
   # Custom user Binary and Settings
   # "$DOTFILES_PATH/bin"
 
-  # --------------------------------------------- #
+  # ---------------------------------------------------------------------------
   # Languages Binary
-  # --------------------------------------------- #
-
-  # --- Ruby ------------------------------------ #
-  # "$GEM_HOME/bin"
-  # "$RBENV_PATH/shims/ruby"
-
-  # --- Rust ------------------------------------ #
-  "$CARGO_PATH/bin"
+  # ---------------------------------------------------------------------------
 
   #-----------------------------------------------------------------
   # Additional tools and software 
   #-----------------------------------------------------------------
+  "/opt/homebrew/opt/curl/bin"
 
   # Brew Home for arm64 (Apple Silicon M1 or higher)
+  "/opt/homebrew/opt"
   "/opt/homebrew/bin"
-
-  # INFO: suggested by `brew doctor`
   "/opt/homebrew/sbin"
 
   # Brew Home for i386 (Intel)
@@ -89,6 +82,19 @@ path=(
 export path
 
 export EDITOR=nvim
+
+# -------------------
+# Curl
+# -------------------
+# For compilers to find curl you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+
+# For pkg-config to find curl you may need to set:
+export PKG_CONFIG_PATH="/opt/homebrew/opt/curl/lib/pkgconfig"
+
+# zsh completions have been installed to:
+# /opt/homebrew/opt/curl/share/zsh/site-functions
 
 # -----------------------------------------------------------------------------
 # Ollama Server Support for LLM Models interpreter
