@@ -89,3 +89,17 @@ path=(
 export path
 
 export EDITOR=nvim
+
+# -----------------------------------------------------------------------------
+# Ollama Server Support for LLM Models interpreter
+# -----------------------------------------------------------------------------
+export OLLAMA_SERVER="127.0.0.1"
+export OLLAMA_PORT="11434"
+export OLLAMA_HOST="${OLLAMA_SERVER}:${OLLAMA_PORT}"
+
+export LLM_MODEL_CODENAME="qwen"
+export LLM_MODEL_VERSION="2.5"
+export LLM_MODEL_RELEASE="coder"
+export LLM_MODEL_TAG="7b"
+
+export LLM_MODEL="${LLM_MODEL_CODENAME}${LLM_MODEL_VERSION}-${LLM_MODEL_RELEASE}:${LLM_MODEL_TAG}"
