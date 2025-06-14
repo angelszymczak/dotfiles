@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export SHELL_PATH="${DOTFILES_PATH}/shell"
+
 # ------------------------------------------------------------------------------
 # Theme config
 # ------------------------------------------------------------------------------
@@ -109,3 +111,21 @@ export LLM_MODEL_RELEASE="coder"
 export LLM_MODEL_TAG="7b"
 
 export LLM_MODEL="${LLM_MODEL_CODENAME}${LLM_MODEL_VERSION}-${LLM_MODEL_RELEASE}:${LLM_MODEL_TAG}"
+
+# -----------------------------------------------------------------------------
+# Open Web UI | Support for multi LLM Models interpreters
+# -----------------------------------------------------------------------------
+export OPEN_WEBUI_PORT=7654
+
+# Ollama Configs
+export OLLAMA_BASE_URL="http://${OLLAMA_HOST}"
+
+# OpenAI
+export OPENAI_API_BASE_URL="https://api.openai.com/v1/models"
+export OPENAI_API_KEY="YOUR_KEY"
+
+# Notes
+export NOTES_PATH="${HOME}/Vaults/Harvis"
+export NOTES_INBOX_PATH="${NOTES_PATH}/200 - INBOX"
+export NOTES_DAILY_PATH="${NOTES_PATH}/000 - DIARIO"
+export NOTES_DAILY_TODO_PATH="${NOTES_DAILY_PATH}/TODO"
